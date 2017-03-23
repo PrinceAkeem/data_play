@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Play</title>
+  </head>
+  <body>
+
+    <!-- SETUP
+      1.) Add the external data.js to the head
+        * Take some time to review and look it over
+        * How would you check to see that it was properly loaded?
+
+      2.) Add the app.js file at the end of the body
+        * Why do we do that?
+        * How would you check to see that it is properly linked?
+
+      3.) Create a CSS file for your index html
+        * Verify it is linked properly
+    -->
+
+    <!-- Map practice
+
+      Part A.)
+
+      1.) Map over the data warnings
+        * For each warning return the type wrapped in <div> and </div>
+
+      2.) Set the innerHTML of #warnings to the mapped warnings types above
+
+
+      Part B.)
+
+      2.) For each warning display the the warnings type and message in the div
+        * Put the type in h2 tags and the message in paragraph tags.
+
+    -->
+
+    <!-- Autocomplete-ish?
+
+      Part Ahy
+
+      1.) When someone types in the "#foodCategories" input field console log the value
+        * Try using the "change" event
+        * Try using the "keydown" event
+        * Try using the "keypress" event
+
+      2.) Filter through the values in the data categories to find
+            values starting with the value in #foodCategories
+        * Console log the values similar to the one in the input field
+        * Map each of the similar values to values wrapped in <option>
+          and </option> tags
+        * Set the mapped similar options to the innerHTML of the #suggestions element
+
+      3.) Add the class hidden to the #suggestions element
+        * After setting the innerHTML of the suggestions remove the hidden class
+          from the classList
+
+      Part Bee
+
+      3.) Listen for the change event on the suggestions
+        * When clicked log the #suggestions value
+
+      4.) Set the value of the #foodCategories to the selected suggestion
+        * Add back the hidden class to the #suggestions element
+
+      Part C
+
+      5.) When the #filtering form submits
+        * Prevent the default form event behavior
+          * What does that do?
+        * Console log the foodCategories value
+
+      6.) Filter the warnings to only warning matching the foodCategories values
+        * Log the warnings of that type
+        * Set the warnings and their messages and types to the innerHTML of #warnings
+
+      7.) Display the items of the selected #foodCategories on submit
+        * Display on the names of the items
+        * Display the description of the item
+        * Wrap the description in a div and the name in an h2 tag
+          * Add a class name of description to all items
+          * Make all descriptions hidden by default
+          * Display all descriptions on hover
+            * Should you use JS or CSS for this? Why?
+            * You should definitely use CSS.
+
+    -->
+
+    <form id="filtering">
+      <input type="text" id="foodCategories" placeholder="type a food">
+      <select id="suggestions">
+      </select>
+
+      <button>Search</button>
+    </form>
+
+    <div id="warning">
+    </div>
+
+    <div id="items">
+    </div>
+  </body>
+</html>
